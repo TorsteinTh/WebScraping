@@ -17,6 +17,8 @@ Will return the weather for Bergen
 
 will return the weather for Oslo
 
+## SwtichScraper
+Gets the price for Nintendo Switch on netonnet.no
 
 > How you enjoy this and see how easy it is to use webscraper
 - Torstein
