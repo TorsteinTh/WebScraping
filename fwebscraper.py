@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 def GetTheWeather():
     if len(s.argv) == 2:
-        by = s.argv[1] 
+        by = s.argv[1]
     else:
         by = 'ams'
 
@@ -22,25 +22,22 @@ def GetTheWeather():
     else:
         assert('No city was selected')
 
-
-    #Get Info 
+    # Get Info
     page = requests.get(URL)
 
     # Pretty
     soup = BeautifulSoup(page.content, 'html.parser')
-    
 
     # Print
-    cels = soup.find_all('td',class_="temperature plus")    
     kls = soup.find_all('td', scope="row")
     mms = soup.find_all('td', class_='precipitation')
+    cels = soup.find_all('td', class_="temperature plus")
     print('This is the weather for the next days:')
     print('--------------------------------------')
     print(by)
     print('--------------------------------------')
-    for cel, kl, mm  in zip(cels, kls, mms):
+    for cel, kl, mm in zip(cels, kls, mms):
         print(kl.text + "\t \t" + cel.text + "\t" + mm.text)
-    
-   
+
 
 GetTheWeather()
