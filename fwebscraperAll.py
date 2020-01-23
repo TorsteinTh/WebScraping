@@ -30,7 +30,7 @@ class Weather:
         for soup in self.soups:
             kls = soup.find_all('td', scope="row")
             mms = soup.find_all('td', class_='precipitation')
-            cels = soup.find_all('td', class_="temperature plus")
+            cels = soup.find_all('td', class_="temperature")
             self.results.append(City(kls, mms, cels))
             self.kls.append(kls)
 
@@ -58,12 +58,13 @@ class Weather:
             self.printkl = bcolors.UNDERLINE
 
             for city in self.results:
-                cel = city.cels.pop()
-                mm = city.mms.pop()
+                cel = city.cels.pop(0)
+                mm = city.mms.pop(0)
                 if('0 mm' != mm.text):
-                    self.printmm = bcolors.OKBLUE
-                if(cel.text < 2):
+                    self.printmm = bcolors.OKLIGHTBLUE
+                if (re.search(r'[-][0-9]', cel.text) is not None):
                     self.printcel = bcolors.OKBLUE
+
                 print self.printcel + cel.text + bcolors.ENDC + '\t' + self.printmm + mm.text + "\t\t" + bcolors.ENDC,
                 self.printmm = bcolors.OKGREEN
                 self.printcel = bcolors.UNDERLINE
@@ -87,6 +88,7 @@ class City:
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
+    OKLIGHTBLUE = '\033[34m'
     OKGREEN = '\033[92m'
     WARNING = '\033[93m'
     FAIL = '\033[91m'
