@@ -35,7 +35,6 @@ class Weather:
             self.kls.append(kls)
 
     def printResults(self):
-        print('This is the weather for the next days:')
         print('----------------------------------------------------------------------------------------')
         print '\t\t\t',
         for city in self.citys:
@@ -58,6 +57,10 @@ class Weather:
             self.printkl = bcolors.UNDERLINE
 
             for city in self.results:
+                if len(city.cels) == 0:
+                    print 'NaN'
+                    print 'Data might not be fully correct!'
+                    continue
                 cel = city.cels.pop(0)
                 mm = city.mms.pop(0)
                 if('0 mm' != mm.text):
