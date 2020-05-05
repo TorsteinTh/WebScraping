@@ -30,7 +30,7 @@ will return the weather for Oslo
 Gets the price for Nintendo Switch on netonnet.no
 
 ```python SwitchScraper.py```
+![](pris.png)
 
 
-> How you enjoy this and see how easy it is to use webscraper
 - Torstein
