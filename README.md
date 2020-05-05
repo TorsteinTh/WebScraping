@@ -8,6 +8,7 @@ You need to use Python 2 (To make the print syntax working)
 Run:
 ```python fwebscraperAll.py ```
 
+![](pic.png)
 
 
 ### optional 
