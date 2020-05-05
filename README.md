@@ -2,14 +2,22 @@
 
 ## fwebscraper:
 This scrape the yr.no page for the weather forecast
+You need to use Python 2 (To make the print syntax working)
 
+
+Run:
+```python fwebscraperAll.py ```
+
+
+
+### optional 
 By default the city is 'Amsterdam'
 
-```python fwebsraper.py``` or ```python fwebscraper.py ams``` or ```python fwebscraper.py amsterdam```
+```python fwebscraper.py``` or ```python fwebscraper.py ams``` or ```python fwebscraper.py amsterdam```
 
 This will return the weather for Amsterdam
 
-```python fwebsraper.py be``` or ```python fwebscraper.py bergen```
+```python fwebscraper.py be``` or ```python fwebscraper.py bergen```
 
 Will return the weather for Bergen
 
@@ -17,8 +25,11 @@ Will return the weather for Bergen
 
 will return the weather for Oslo
 
-## SwtichScraper
+## SwitchScraper
 Gets the price for Nintendo Switch on netonnet.no
+
+```python SwitchScraper.py```
+
 
 > How you enjoy this and see how easy it is to use webscraper
 - Torstein
