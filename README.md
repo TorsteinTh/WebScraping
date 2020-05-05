@@ -34,4 +34,4 @@ Gets the price for Nintendo Switch on netonnet.no
 ![](pris.png)
 
 
-- Torstein
+- Torstein T
