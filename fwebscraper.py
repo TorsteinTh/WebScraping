@@ -16,7 +16,7 @@ def GetTheWeather():
     elif(by == 'be' or by == 'bergen'):
         URL = 'https://www.yr.no/sted/Norge/Vestland/Bergen/Bergen/time_for_time.html'
         by = 'BERGEN'
-    elif(br == 'os' or by == 'oslo'):
+    elif(by == 'os' or by == 'oslo'):
         URL = 'https://www.yr.no/place/Norway/Oslo/Oslo/Oslo/hour_by_hour.html'
         by = 'OSLO'
     else:
