@@ -6,10 +6,11 @@ from bs4 import BeautifulSoup
 
 class Weather:
     def __init__(self):
-        self.citys = ['AMSTERDAM', 'BERGEN', 'OSLO']
-        self.URL = ['https://www.yr.no/sted/Nederland/Nord-Holland/Amsterdam/time_for_time.html',
+        self.citys = ['OSLO', 'BERGEN', 'AMSTERDAM']
+        self.URL = ['https://www.yr.no/sted/Norge/Oslo/Oslo/Oslo/time_for_time.html',
                     'https://www.yr.no/sted/Norge/Vestland/Bergen/Bergen/time_for_time.html',
-                    'https://www.yr.no/sted/Norge/Oslo/Oslo/Oslo/time_for_time.html']
+                    'https://www.yr.no/sted/Nederland/Nord-Holland/Amsterdam/time_for_time.html'
+                    ]
         self.pages = []
         self.soups = []
         self.results = []
